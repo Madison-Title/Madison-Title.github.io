@@ -1,0 +1,507 @@
+<style type='text/css'>
+    body {
+      font-family: 'Thasadith', serif;
+      padding-top: 70px;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container-fluid {
+      width: 100% !important;
+      padding: 0 !important;
+    }
+
+    .bg-light {
+      background-color: #FFFFFF !important;
+    }
+
+    .nav-link {
+      color: #4e5156 !important;
+    }
+
+    .nav-link:hover {
+      color: #000000 !important;
+    }
+
+    .navbar-brand img {
+      height: 4rem;
+    }
+
+    .navbar-brand {
+      text-align: center;
+    }
+
+    .hero-image {
+      width: 100%;
+    }
+
+    .pricing-card-container li{
+        font-size: 15px;
+    }
+
+    .pricing-card-special {
+      background-color: #ff9317;
+    }
+
+    .best-seller{
+      text-transform: uppercase;
+      color: white;
+      background-color: #23a521;
+    }
+
+    .pricing-card-normal {
+      background-color: #61a1d1;
+    }
+
+    .pricing .card {
+      min-width: 220px;
+    }
+
+    .border-top { border-top: 1px solid #e5e5e5; }
+    .border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+    .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+    sup{
+      font-size:12px;
+    }
+
+    .blog p{
+      font-size: 15px;
+    }
+
+    .blog ul{
+      font-size: 15px;
+    }
+
+    .blog ul li{
+      margin-bottom:5px;
+    }
+
+    #jumbotron-main-image{
+        max-height: 750px;
+        max-width: auto;
+    }
+
+    .image-group .row {
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: inline-block;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+
+    .main-image-display{
+      margin-bottom: 2rem;
+    }
+
+    .image-group img {
+      max-height: 10rem;
+      max-width: 10rem;
+    }
+
+    .contact-mobile a{
+      width: 100%;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    input {
+        max-width: 100%;
+    }
+
+    .trash-hover{
+      z-index: 1;
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      color: red;
+      font-size:25px;
+    }
+
+    @media (max-width: 768px) {
+      .team-name {
+        text-align:center;
+      }
+
+      .bio-template {
+        margin: 0 auto;
+      }
+
+      .desktop-size {
+        visibility:hidden;
+      }
+
+      .mobile-size {
+        visibility:visible;
+      }
+
+      .mobile-boundary{
+        margin-bottom: 75%;
+      }
+      .mobile-display{
+          visibility:visible;
+      }
+
+      .tablet-display{
+          visibility:hidden;
+      }
+
+      .contact-body{
+        display:none;
+      }
+
+      .contact-mobile{
+        display:block;
+      }
+
+      .mobile-dropzone{
+        display: none;
+      }
+
+      .create-listing-navigation{
+        font-size:10px;
+      }
+
+      .vehicle-card .card-float-text{
+        z-index: 1;
+        position: absolute;
+        right: 5px;
+        bottom: 44px;
+      }
+
+
+
+        .sidebar {
+            display: none;
+        }
+
+        .top-filter {
+            display: block;
+        }
+
+        .banner-content {
+            position:absolute;
+            top:25rem;
+            left:5rem;
+            color:#FFFFFF;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+
+        .banner-content h3{
+          font-size: 1.5rem;
+        }
+
+        .banner-content{
+          margin-bottom: 2.5rem;
+        }
+    }
+
+    @media (min-width: 769px) {
+      .desktop-size {
+        visibility:visible;
+      }
+
+      .mobile-size {
+        visibility:hidden;
+      }
+
+      .mobile-display{
+          visibility:hidden;
+      }
+
+      .tablet-display{
+          visibility:visible;
+      }
+
+      .contact-body{
+        display: block;
+      }
+
+      .contact-mobile{
+        display: none;
+      }
+
+      .mobile-dropzone{
+        display: block;
+      }
+
+      .vehicle-card .card-float-text{
+        z-index: 1;
+        position: absolute;
+        right: 5px;
+        bottom: 44px;
+      }
+
+        .sidebar {
+            display: block;
+        }
+
+        .top-filter {
+            display: none;
+        }
+
+        .banner-content{
+          position:absolute;
+          top:25rem;
+          left:10rem;
+          color:#FFFFFF;
+          font-weight: bold;
+          font-size: 2.5rem;
+        }
+
+        .banner-content h3{
+          color:#82baff;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: black;
+        }
+    }
+
+    .display-flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card [class*='ion']{
+      font-size:24px;
+    }
+
+    .display-flex > [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar-nav{
+      font-size:18px;
+    }
+
+    .vehicle-card{
+      font-size: 12px;
+    }
+
+    .card-start{
+      margin-bottom: 10px;
+    }
+
+    .vehicle-card a{
+      text-decoration:none;
+      color: #000000;
+    }
+
+    .vehicle-card .card-title{
+      font-size: 1.0rem;
+    }
+
+    .vehicle-card:hover{
+      box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .hover-image :hover{
+      box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .vehicle-card .card-img-top{
+      z-index: 0;
+    }
+
+    .card-block{
+      min-height: 11.1rem;
+    }
+
+    .card-float-city{
+      z-index: 1;
+      position:absolute;
+      color: white;
+      bottom: 108px;
+      left: 5px;
+    }
+
+    .outline-shadow{
+      text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    }
+
+
+    .vehicle-card .card-float-mileage{
+      z-index: 1;
+      position: absolute;
+      top:5px;
+      left: 5px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .vehicle-card .card-float-trash{
+      z-index: 1;
+      position: absolute;
+      top:5px;
+      right: 5px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .vehicle-card .card-float-text:hover{
+      color:red;
+    }
+
+    .vehicle-card .card-body{
+      padding: 0.25rem;
+    }
+
+    .listing-container{
+      background-color: #f2f3f4;
+    }
+
+    .carousel-inner img{
+      max-width: 100%;
+    }
+
+    footer{
+      background-color:#273751;
+      color: #ddeaff;
+      margin-top: 4rem;
+    }
+
+    .footer-pad{
+      margin-top:10px;
+    }
+
+    .footer-pad a{
+      color: white;
+    }
+
+    #myCarousel img{
+      width: auto;
+    }
+
+    .message-list{
+      margin-bottom: 15px;
+    }
+
+    .upload-drop-zone {
+height: 200px;
+border-width: 2px;
+margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+color: #ccc;
+border-style: dashed;
+border-color: #ccc;
+line-height: 200px;
+text-align: center
+}
+.upload-drop-zone.drop {
+color: #222;
+border-color: #222;
+}
+
+.ui-widget{
+z-index: 1050;
+}
+
+.ui-autocomplete {
+max-height: 200px;
+overflow-y: auto;
+/* prevent horizontal scrollbar */
+overflow-x: hidden;
+font-size: 14px;
+}
+
+.content{
+flex: 1 0 auto;
+}
+
+footer{
+flex-shrink: 0;
+}
+
+.bottom-space{
+margin-bottom: 15px;
+}
+
+.create-listing-navigation{
+margin-bottom:1.2rem;
+}
+
+.hide-content{
+  visibility: hidden;
+}
+
+.container p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.slides {
+  background-position: center center;
+  background-size: cover;
+  height: 30rem;
+}
+
+.slide_1 {
+  background-image: url(mainHeroImage.jpg);
+}
+
+.slide_2 {
+  background-image: url(mainHeroImage2.jpg);
+}
+
+.slide_3 {
+  background-image: url(mainHeroImage3.jpg);
+}
+
+.slide_4 {
+  background-image: url(mainHeroImage4.jpg);
+}
+
+.main .container {
+  margin-top: 3rem;
+}
+
+.bio-template {
+  margin-bottom: 5rem;
+}
+
+.bio-template:before {
+    display: block;
+    content: " ";
+    height: 100px;  /* Give height of your fixed element */
+    margin-top: -100px; /* Give negative margin of your fixed element */
+    visibility: hidden;
+}
+
+.navbar {
+  border-bottom: 1px solid #efefef;
+}
+
+.submit-container {
+  float: right;
+}
+
+.alert-container {
+  margin-top: 30px;
+}
+</style>
